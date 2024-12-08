@@ -46,7 +46,7 @@ We use OpenZeppelin Contracts to create the ERC20 token. OpenZeppelin provides s
 
     import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-    contract MyToken is ERC20 {
+    contract MyFirstToken is ERC20 {
         constructor(uint256 initialSupply) ERC20("MyToken", "MTK") {
             _mint(msg.sender, initialSupply);
         }
@@ -64,6 +64,7 @@ We use Hardhat Ignition to deploy the contract.
     import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
     const MyTokenModule = buildModule("MyToken", (m) => {
+                   // name of your contract and inside the array add the constructor parameters
     const token = m.contract("MyFirstToken", [25]);
     return { token };
     });
