@@ -47,7 +47,7 @@ We use OpenZeppelin Contracts to create the ERC20 token. OpenZeppelin provides s
     import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
     contract MyFirstToken is ERC20 {
-        constructor(uint256 initialSupply) ERC20("MyToken", "MTK") {
+        constructor(uint256 initialSupply) ERC20("MyToken", "MFT") {
             _mint(msg.sender, initialSupply);
         }
     }
